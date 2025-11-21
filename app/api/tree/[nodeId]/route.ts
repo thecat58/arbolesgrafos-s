@@ -1,0 +1,29 @@
+import { NextResponse } from "next/server"
+import { buildHierarchy, findNodeInHierarchy } from "@/lib/mock-data"
+
+// Endpoint para obtener el árbol jerárquico desde un nodo específico
+export async function GET(request: Request, { params }: { params: { nodeId: string } }) {
+  const nodeId = params.nodeId
+  const hierarchy = buildHierarchy()
+
+  // Si es 'root', devolver toda la jerarquía
+  if (nodeId === "root") {
+    return NextResponse.json({
+      id: "root",
+      name: "Catálogo Completo",
+      type: "device",
+      level: 0,
+      children: hierarchy,
+      data: {},
+    })
+  }
+
+  // Buscar el nodo específico
+  const node = findNodeInHierarchy(hierarchy, nodeId)
+
+  if (!node) {
+    return NextResponse.json({ error: "Node not found" }, { status: 404 })
+  }
+
+  return NextResponse.json(node)
+}
