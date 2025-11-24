@@ -3,7 +3,10 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+<<<<<<< HEAD
 import { SelectionProvider } from "@/components/selection-context"
+=======
+>>>>>>> ebf457fafb632865860880df5803bb25a592549c
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -40,10 +43,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+<<<<<<< HEAD
       <body>
         <SelectionProvider>
           {children}
         </SelectionProvider>
+=======
+      <body className={`font-sans antialiased`}>
+        {children}
+        <Analytics />
+>>>>>>> ebf457fafb632865860880df5803bb25a592549c
       </body>
     </html>
   )

@@ -5,13 +5,22 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ContextualListView } from "@/components/contextual-list-view"
 import { ContextualTreeView } from "@/components/contextual-tree-view"
 import { ContextualGraphView } from "@/components/contextual-graph-view"
+<<<<<<< HEAD
 import { PathBreadcrumb } from "@/components/path-breadcrumb"
+=======
+import { ContextualProductCard } from "@/components/contextual-product-card"
+import { PathBreadcrumb } from "@/components/path-breadcrumb"
+import { ContextualRecommendations } from "@/components/contextual-recommendations"
+>>>>>>> ebf457fafb632865860880df5803bb25a592549c
 import type { NavigationPath, ContextualNode } from "@/lib/types"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { AlertCircle, Loader2, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
+<<<<<<< HEAD
 import ContextualRecommendations from "@/components/contextual-recommendations"
 import ContextualProductCard from "@/components/contextual-product-card"
+=======
+>>>>>>> ebf457fafb632865860880df5803bb25a592549c
 
 export default function Page() {
   const [activeView, setActiveView] = useState<"list" | "tree" | "graph">("list")

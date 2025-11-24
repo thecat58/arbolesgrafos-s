@@ -153,6 +153,10 @@ export function RecommendationsPanel({ recommendations }: RecommendationsPanelPr
                         {rec.type === "kit" && "Kit"}
                         {rec.type === "combination" && "Combinación"}
                         {rec.type === "equivalent" && "Equivalente"}
+<<<<<<< HEAD
+=======
+                        {rec.type === "personalized" && "Personalizado"}
+>>>>>>> ebf457fafb632865860880df5803bb25a592549c
                       </Badge>
                       <div className="flex items-center gap-1">
                         <div
