@@ -49,7 +49,6 @@ export function ListsView({ onNavigate }: ListsViewProps) {
     })
   }
 
-<<<<<<< HEAD
   // Nuevo helper: obtiene la url de imagen y maneja fallback
   const getImageSrc = (item: any, size: "device" | "accessory" = "device") => {
     // Preferir campo explícito, luego intentar por id en /images/, finalmente placeholder
@@ -60,9 +59,6 @@ export function ListsView({ onNavigate }: ListsViewProps) {
     const img = e.currentTarget
     if (!img.src.endsWith("/placeholder.png")) img.src = "/images/placeholder.png"
   }
-=======
-  const brands = Array.from(new Set([...mockDevices.map((d) => d.brand), ...mockAccessories.map((a) => a.brand)]))
->>>>>>> ebf457fafb632865860880df5803bb25a592549c
 
   return (
     <div className="space-y-6">
@@ -101,11 +97,7 @@ export function ListsView({ onNavigate }: ListsViewProps) {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">Todas las marcas</SelectItem>
-<<<<<<< HEAD
                 {Array.from(new Set([...mockDevices.map((d) => d.brand), ...mockAccessories.map((a) => a.brand)])).map((brand) => (
-=======
-                {brands.map((brand) => (
->>>>>>> ebf457fafb632865860880df5803bb25a592549c
                   <SelectItem key={brand} value={brand}>
                     {brand}
                   </SelectItem>
@@ -123,25 +115,14 @@ export function ListsView({ onNavigate }: ListsViewProps) {
           {filteredDevices.map((device) => (
             <Card
               key={device.id}
-<<<<<<< HEAD
               className={`cursor-pointer transition-all hover:shadow-lg ${selectedItem === device.id ? "ring-2 ring-primary" : ""}`}
-=======
-              className={`cursor-pointer transition-all hover:shadow-lg ${
-                selectedItem === device.id ? "ring-2 ring-primary" : ""
-              }`}
->>>>>>> ebf457fafb632865860880df5803bb25a592549c
               onClick={() => handleItemClick(device.id)}
             >
               <CardContent className="p-4">
                 <img
-<<<<<<< HEAD
                   src={getImageSrc(device, "device")}
                   alt={device.name}
                   onError={handleImgError}
-=======
-                  src={device.imageUrl || "/placeholder.svg"}
-                  alt={device.name}
->>>>>>> ebf457fafb632865860880df5803bb25a592549c
                   className="w-full h-32 object-cover rounded-md mb-3"
                 />
                 <h3 className="font-semibold text-foreground mb-1">{device.name}</h3>
@@ -163,25 +144,14 @@ export function ListsView({ onNavigate }: ListsViewProps) {
           {filteredAccessories.map((accessory) => (
             <Card
               key={accessory.id}
-<<<<<<< HEAD
               className={`cursor-pointer transition-all hover:shadow-lg ${selectedItem === accessory.id ? "ring-2 ring-primary" : ""}`}
-=======
-              className={`cursor-pointer transition-all hover:shadow-lg ${
-                selectedItem === accessory.id ? "ring-2 ring-primary" : ""
-              }`}
->>>>>>> ebf457fafb632865860880df5803bb25a592549c
               onClick={() => handleItemClick(accessory.id)}
             >
               <CardContent className="p-3">
                 <img
-<<<<<<< HEAD
                   src={getImageSrc(accessory, "accessory")}
                   alt={accessory.name}
                   onError={handleImgError}
-=======
-                  src={accessory.imageUrl || "/placeholder.svg"}
-                  alt={accessory.name}
->>>>>>> ebf457fafb632865860880df5803bb25a592549c
                   className="w-full h-24 object-cover rounded-md mb-2"
                 />
                 <h3 className="font-semibold text-sm text-foreground mb-1">{accessory.name}</h3>

@@ -53,10 +53,7 @@
     "react-dom": "19.2.0",
     "react-hook-form": "^7.60.0",
     "react-resizable-panels": "^2.1.7",
-<<<<<<< HEAD
     "reactflow": "^11.11.4",
-=======
->>>>>>> ebf457fafb632865860880df5803bb25a592549c
     "recharts": "2.15.4",
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.5.5",
@@ -74,8 +71,4 @@
     "tw-animate-css": "1.3.3",
     "typescript": "^5"
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ebf457fafb632865860880df5803bb25a592549c

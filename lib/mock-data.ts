@@ -1,5 +1,10 @@
 import type { Device, Accessory, Feature } from "./types"
 
+/**
+ * Datos mock de dispositivos y accesorios.
+ * Traducción de campos visibles para la interfaz al español.
+ */
+
 export const mockDevices: Device[] = [
   {
     id: "dev-1",
@@ -18,7 +23,7 @@ export const mockDevices: Device[] = [
     category: "smartphones",
     model: "SM-S928",
     imageUrl: "/samsung-galaxy-s24-ultra.png",
-    description: "Android flagship con S-Pen y cámara de 200MP",
+    description: "Teléfono Android de gama alta con S-Pen integrado y cámara de 200MP",
     releaseYear: 2024,
   },
   {
@@ -28,7 +33,7 @@ export const mockDevices: Device[] = [
     category: "laptops",
     model: "M3 Max",
     imageUrl: "/macbook-pro.png",
-    description: "Laptop profesional con chip M3 Max",
+    description: "Portátil profesional con chip M3 Max",
     releaseYear: 2023,
   },
   {
@@ -46,7 +51,7 @@ export const mockDevices: Device[] = [
 export const mockAccessories: Accessory[] = [
   {
     id: "acc-1",
-    name: "MagSafe Case",
+    name: "Funda MagSafe",
     brand: "Apple",
     type: "case",
     compatibleDevices: ["dev-1"],
@@ -57,7 +62,7 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-2",
-    name: "USB-C Cable 2m",
+    name: "Cable USB-C 2 m",
     brand: "Anker",
     type: "cable",
     compatibleDevices: ["dev-1", "dev-2", "dev-3"],
@@ -69,19 +74,19 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-3",
-    name: "67W GaN Charger",
+    name: "Cargador GaN 67W",
     brand: "Anker",
     type: "charger",
     compatibleDevices: ["dev-1", "dev-2", "dev-3"],
     imageUrl: "/usb-c-fast-charger.jpg",
-    description: "Cargador compacto de nitruro de galio",
+    description: "Cargador compacto de nitruro de galio (GaN)",
     price: 49.99,
     inStock: false,
     alternativeIds: ["acc-8"],
   },
   {
     id: "acc-4",
-    name: "Silicone Case",
+    name: "Funda de silicona",
     brand: "Samsung",
     type: "case",
     compatibleDevices: ["dev-2"],
@@ -92,7 +97,7 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-5",
-    name: "Laptop Stand",
+    name: "Soporte para portátil",
     brand: "Rain Design",
     type: "stand",
     compatibleDevices: ["dev-3"],
@@ -103,7 +108,7 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-6",
-    name: "FE 24-70mm Lens",
+    name: "Objetivo FE 24-70mm",
     brand: "Sony",
     type: "lens",
     compatibleDevices: ["dev-4"],
@@ -114,7 +119,7 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-7",
-    name: "USB-C Cable 1.5m",
+    name: "Cable USB-C 1.5 m",
     brand: "Belkin",
     type: "cable",
     compatibleDevices: ["dev-1", "dev-2", "dev-3"],
@@ -126,7 +131,7 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-8",
-    name: "65W Dual Port Charger",
+    name: "Cargador 65W de doble puerto",
     brand: "Ugreen",
     type: "charger",
     compatibleDevices: ["dev-1", "dev-2", "dev-3"],
@@ -138,11 +143,11 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-9",
-    name: "MagSafe Wallet",
+    name: "Billetera MagSafe",
     brand: "Apple",
     type: "case",
     compatibleDevices: ["dev-1"],
-    parentAccessoryId: "acc-1", // Attaches to MagSafe Case
+    parentAccessoryId: "acc-1", // Se acopla a la funda MagSafe
     imageUrl: "/magsafe-wallet.jpg",
     description: "Billetera magnética que se adhiere a la funda MagSafe",
     price: 39.99,
@@ -150,11 +155,11 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-11",
-    name: "RFID Card Holder",
+    name: "Porta tarjetas RFID",
     brand: "Apple",
     type: "case",
     compatibleDevices: ["dev-1"],
-    parentAccessoryId: "acc-9", // Attaches to MagSafe Wallet
+    parentAccessoryId: "acc-9", // Se inserta en la billetera MagSafe
     imageUrl: "/magsafe-wallet.jpg",
     description: "Porta tarjetas RFID que se inserta en la billetera",
     price: 19.99,
@@ -162,11 +167,11 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-12",
-    name: "AirTag Holder Clip",
+    name: "Clip para AirTag",
     brand: "Belkin",
     type: "case",
     compatibleDevices: ["dev-1"],
-    parentAccessoryId: "acc-11", // Attaches to Card Holder
+    parentAccessoryId: "acc-11", // Se acopla al porta tarjetas
     imageUrl: "/magsafe-wallet.jpg",
     description: "Clip para AirTag que se adhiere al porta tarjetas",
     price: 14.99,
@@ -174,11 +179,11 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-13",
-    name: "Leather Keychain",
+    name: "Llavero de cuero",
     brand: "Apple",
     type: "case",
     compatibleDevices: ["dev-1"],
-    parentAccessoryId: "acc-12", // Attaches to AirTag Holder
+    parentAccessoryId: "acc-12", // Se engancha al clip de AirTag
     imageUrl: "/magsafe-wallet.jpg",
     description: "Llavero de cuero que se engancha al clip de AirTag",
     price: 9.99,
@@ -186,35 +191,35 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-10",
-    name: "Cable Organizer",
+    name: "Organizador de cables",
     brand: "Anker",
     type: "cable",
     compatibleDevices: ["dev-1", "dev-2", "dev-3"],
-    parentAccessoryId: "acc-2", // Attaches to USB-C Cable
+    parentAccessoryId: "acc-2", // Se acopla al cable USB-C
     imageUrl: "/cable-organizer.png",
-    description: "Organizador de cables para mantener ordenado",
+    description: "Organizador de cables para mantener el orden",
     price: 9.99,
     inStock: true,
   },
   {
     id: "acc-14",
-    name: "Cable Clips 6-Pack",
+    name: "Pack de clips para cables (6)",
     brand: "Anker",
     type: "cable",
     compatibleDevices: ["dev-1", "dev-2", "dev-3"],
-    parentAccessoryId: "acc-10", // Attaches to Cable Organizer
+    parentAccessoryId: "acc-10", // Se acopla al organizador de cables
     imageUrl: "/cable-organizer.png",
-    description: "Pack de clips adhesivos para fijar cables organizados",
+    description: "Pack de clips adhesivos para fijar cables",
     price: 6.99,
     inStock: true,
   },
   {
     id: "acc-15",
-    name: "Adhesive Strip Refills",
+    name: "Recambios de tiras adhesivas",
     brand: "Generic",
     type: "cable",
     compatibleDevices: ["dev-1", "dev-2", "dev-3"],
-    parentAccessoryId: "acc-14", // Attaches to Cable Clips
+    parentAccessoryId: "acc-14", // Repuesto para los clips
     imageUrl: "/cable-organizer.png",
     description: "Tiras adhesivas de repuesto para los clips",
     price: 3.99,
@@ -222,23 +227,23 @@ export const mockAccessories: Accessory[] = [
   },
   {
     id: "acc-16",
-    name: "VESA Monitor Arm Adapter",
+    name: "Adaptador VESA para brazo de monitor",
     brand: "Rain Design",
     type: "mount",
     compatibleDevices: ["dev-3"],
-    parentAccessoryId: "acc-5", // Attaches to Laptop Stand
+    parentAccessoryId: "acc-5", // Se acopla al soporte de portátil
     imageUrl: "/aluminum-laptop-stand.jpg",
-    description: "Adaptador VESA para montar el stand en brazo de monitor",
+    description: "Adaptador VESA para montar el soporte en un brazo de monitor",
     price: 34.99,
     inStock: true,
   },
   {
     id: "acc-17",
-    name: "Cable Management Tray",
+    name: "Bandeja para gestión de cables",
     brand: "Rain Design",
     type: "cable",
     compatibleDevices: ["dev-3"],
-    parentAccessoryId: "acc-16", // Attaches to Monitor Arm Adapter
+    parentAccessoryId: "acc-16", // Se acopla al adaptador VESA
     imageUrl: "/aluminum-laptop-stand.jpg",
     description: "Bandeja para organizar cables en el brazo del monitor",
     price: 24.99,
@@ -249,7 +254,7 @@ export const mockAccessories: Accessory[] = [
 export const mockFeatures: Feature[] = [
   {
     id: "feat-1",
-    name: "Carga Rápida",
+    name: "Carga rápida",
     description: "Tecnología de carga acelerada",
     category: "charging",
     relatedAccessoryIds: ["acc-2", "acc-3", "acc-7", "acc-8"],
@@ -270,6 +275,10 @@ export const mockFeatures: Feature[] = [
   },
 ]
 
+/**
+ * Construye la jerarquía (árbol) a partir de los mocks.
+ * Devuelve un arreglo de nodos raíz (cada dispositivo con sus accesorios y características).
+ */
 export function buildHierarchy() {
   const nodes: any[] = []
 
@@ -406,11 +415,4 @@ export function getNodeDepth(hierarchy: any[], nodeId: string): number {
       }
       if (node.children && node.children.length > 0) {
         const childDepth = findDepth(node.children, depth + 1)
-        if (childDepth !== -1) return childDepth
-      }
-    }
-    return -1
-  }
-
-  return findDepth(hierarchy, 0)
-}
+        if

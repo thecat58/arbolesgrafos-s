@@ -34,11 +34,7 @@ export function ContextualListView({ path, onNodeSelect }: ContextualListViewPro
           (item) =>
             item.name.toLowerCase().includes(query) ||
             item.brand?.toLowerCase().includes(query) ||
-<<<<<<< HEAD
             item.type?.toLowerCase().includes(query),
-=======
-            item.category?.toLowerCase().includes(query),
->>>>>>> ebf457fafb632865860880df5803bb25a592549c
         ),
       )
     }
@@ -167,13 +163,8 @@ export function ContextualListView({ path, onNodeSelect }: ContextualListViewPro
                       {item.brand && (
                         <p className="text-xs text-slate-600 dark:text-slate-400 mb-1">Marca: {item.brand}</p>
                       )}
-<<<<<<< HEAD
                       {item.data.category && (
                         <p className="text-xs text-slate-600 dark:text-slate-400 mb-1">Categoría: {item.data.category}</p>
-=======
-                      {item.category && (
-                        <p className="text-xs text-slate-600 dark:text-slate-400 mb-1">Categoría: {item.category}</p>
->>>>>>> ebf457fafb632865860880df5803bb25a592549c
                       )}
                       {item.description && (
                         <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mt-1">
